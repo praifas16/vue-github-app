@@ -21,3 +21,9 @@ jobs:
 
       - name: Run Rbuild production (create dist folder)
         run: npm run build
+
+      - name: Upload disk folder artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-production
+          path: dist
