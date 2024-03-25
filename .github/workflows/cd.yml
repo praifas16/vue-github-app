@@ -38,8 +38,9 @@ jobs:
           name: dist-production
           path: dist
 
-      - run: ls dist
-
+      - run:
+          ls dist
+          #ให้ Deploy เอง
       - uses: actions/checkout@v4
 
       - name: publish vue to github pages
